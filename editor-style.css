@@ -1,0 +1,5 @@
+/* Tooltip-markering in de Gutenberg editor */
+.editor-styles-wrapper span.tooltip {
+    border-bottom: 2px dotted currentColor;
+    cursor: help;
+}
