@@ -1,6 +1,7 @@
 (function () {
     var registerFormatType    = wp.richText.registerFormatType;
     var toggleFormat          = wp.richText.toggleFormat;
+    var applyFormat           = wp.richText.applyFormat;
     var removeFormat          = wp.richText.removeFormat;
     var getActiveFormat       = wp.richText.getActiveFormat;
     var RichTextToolbarButton = wp.blockEditor.RichTextToolbarButton;
@@ -191,8 +192,11 @@
             if ( tooltipInput.trim() === '' ) {
                 onChange( removeFormat( value, FORMAT_NAME ) );
             } else {
+                // Gebruik applyFormat (niet toggleFormat): toggleFormat verwijdert
+                // het format als het al actief is, waardoor een bewerkte tooltip
+                // verdwijnt in plaats van bijgewerkt te worden.
                 onChange(
-                    toggleFormat( value, {
+                    applyFormat( value, {
                         type: FORMAT_NAME,
                         attributes: {
                             'class':        'tooltip',

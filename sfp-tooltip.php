@@ -2,13 +2,13 @@
 /**
  * Plugin Name: SFP Tooltip
  * Description: Voegt een tooltip-knop toe aan de Gutenberg inline-toolbar. Geselecteerde tekst wordt gewrapped in <span class="tooltip" data-tooltip="...">. Laadt ook de frontend-JS voor de tooltip-weergave.
- * Version:     1.3.0
+ * Version:     1.3.1
  * Author:      School for Professionals
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'SFP_TOOLTIP_VERSION', '1.3.0' );
+define( 'SFP_TOOLTIP_VERSION', '1.3.1' );
 
 // ── Auto-updater via GitHub Releases ─────────────────────────────────────────
 require_once plugin_dir_path( __FILE__ ) . 'sfp-tooltip-updater.php';
